@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoorulHudaLiteratureFestival2024</title>
+  <link rel="icon" href="GIZMO DP.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="20x20" href="NLF-WHITE.png">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Add this to your <head> section -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="styles.css">
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: 'Red Hat Display', serif;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: white;
+    }
+
+    header{
+      width: 100%;
+      height: 14vh;
+      overflow: hidden;
+      
+    }
+    header {
+   
+    transition: background-color 0.3s ease;
+}
+
+
+    nav{
+      width: 100%;
+      height: 14vh;
+      position: sticky;
+      background:transparent;
+      z-index: 1000;
+    }
+
+    .nav-container{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .logo{
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .logo span{
+      color: #30a8e5;
+      text-shadow: 0 0 10px #30a8e5;
+    }
+
+    .bell-icon {
+      font-size: 1.5rem;
+      color: red;
+      display: inline-block;
+      position: relative;
+    }
+
+    .bell-icon i {
+      font-size: 1.8rem;
+      color: red;
+    }
+
+    .hamburg
+    {
+        cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: black;
+      display: none;
+      font-size: 1.3rem;
+    }
+    .cancel{
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: black;
+      display: none;
+      font-size: 1rem;
+    }
+
+    .nav-container .links{
+      display: flex;
+      margin-left: 100px;
+    }
+
+    .nav-container .links a{
+      position: relative;
+      font-size: 20px;
+      color: black;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s linear;
+      font-family: 'GOXAC',serif;
+    }
+
+    .nav-container .links a::before{
+      position: absolute;
+      content: "";
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: black;
+      transition: 0.2s linear;
+    }
+
+    .nav-container .links a:hover::before{
+      width: 100%;
+    }
+
+    .nav-container .links a:hover{
+      color: black;
+    }
+
+    .dropdown{
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateY(-500px);
+      width: 100%;
+      height: auto;
+      backdrop-filter: blur(4px) brightness(40%);
+      box-shadow: 0 0 20px black;
+      transition: 0.2s linear;
+      background: white;
+    }
+
+    .dropdown .links a{
+      display: flex;
+      color: black;
+      text-decoration: none;
+      justify-content: center;
+      padding: 15px 0;
+      align-items: center;
+      transition: 0.2s linear;
+    }
+
+    .dropdown .links a:hover{
+      background-color: black;
+      color: white;
+    }
+
+    /* Media Queries for smaller devices */
+    @media (max-width: 884px) {
+      nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        font-size: 1.5rem;
+      }
+
+      .nav-container .links {
+        display: none;
+      }
+
+      .hamburg,
+      .cancel{
+        display: block;
+        margin-top: 10px;
+      }
+    }
+    /* Hide the first logo on mobile and tablet screens */
+@media (max-width: 884px) {
+    #default-logo {
+        display: none;
+    }
+    #scrolled-logo {
+        display: inline-block;
+    }
+}
+    .navbutton{
+       width: 230px;
+       height: 40px;
+       border-radius: 7px;
+       background: black;
+       border-color: none;
+       color: white;
+       transition: 0.3sec ease-in;
+       font-family: 'Montserrat', sans-serif;
+      
+    }
+    .navbutton:hover{
+      border-radius: 20px;
+    }
+    .navbtn{
+        margin-left: 20px;
+    }
+    .headline {
+    font-size: 6.5vw;
+    line-height: 1.2em;
+    font-family: 'Red Hat Display',sans-serif;
+    background: -webkit-linear-gradient(left,#dd3b8c ,#f9bf52 ,#1cb4a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+}
+  </style>
+
+
+
+
+
+
+
+<style>
+ 
+
+
+@font-face {
+    font-family: 'Goxac';
+    src: url(GOXAC-GOXAC-Regular.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Billian Dreams';
+    src: url(BillionDreams_PERSONAL.ttf) format('truetype');
+}
+
+.btns{
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-color: black;
+
+}
+.btns:hover{
+  background-color: red;
+  border-color: red;
+}
+
+  </style>
+
+
+
+ 
+    <style>
+  .lastbutton {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30vh;
+background-color: white;
+}
+
+.next-page-arrow {
+text-decoration: none;
+font-size: 24px;
+color: black;
+border: 2px solid black;
+padding: 10px 20px;
+border-radius: 20px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next-page-arrow:hover {
+background-color: #2e1740;
+color: #fff;
+}
+i{
+  cursor: pointer;
+  transform: 3sec ease-out;
+  color: white;
+}
+i:hover{
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, 0.589);
+}
+
+    </style>
+    <style>
+      .paybtn{
+        background-color: #2e1740;
+        color: white;
+        font-size: large;
+       margin-bottom: 18px;
+       border-color: #2e1740;
+      }
+      .paybtn:hover{
+        background-color: red;
+        color: white;
+        border-color: red;
+      }
+    </style>
+    <style>
+      .card{
+        border-style: solid;
+        border-color: black;
+        border-radius: 10px;
+      }
+      .card:hover{
+        border-color:  #4583a0;
+        border-width: 2px;
+        ;
+      }
+      
+  h1.gradient-text {
+    font-family: 'Goxac', sans-serif;
+    font-size: 3.5em;
+    font-weight: normal;
+    color: black;
+    margin-top: 40px;
+  }
+
+  h1.gradient-text span {
+    font-weight: 400;
+    font-family: 'Goxac', sans-serif;
+    color: #2e1740;
+  }
+    </style>
+
+<style>
+  .download-buttons {
+      text-align: center;
+      margin-top: 50px;
+  }
+  .download-button {
+      margin: 10px;
+      padding: 14px 50px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #2e1740;
+      color: white;
+      border: none;
+      border-radius: 5px;
+  }
+  .download-button:hover {
+      background-color: #4583a0;
+  }
+</style>
+
+  </head>
+  <body>
+
+    <header class="header"  style="position: fixed; z-index: 4; " >
+        <nav>
+          <div class="nav-container">
+            <div class="logo-image" data-aos="zoom-in" data-aos-duration="1500">
+                <img src="logo.png" alt="" id="default-logo" style="width:auto; height: 50px; margin-top: 10px;">
+                <img src="logo.png" alt="Scrolled Logo" id="scrolled-logo" style="width:auto; height: 50px; margin-top: 10px; display: none;">
+            </div>
+            <div class="links" style="margin-top: 0px;">
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="200"><a href="index.html">About</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300"><a href="index.html">Speakers</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400"><a href="index.html">Highlights</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">
+                <a href="#" id="eventsLink">Sessions</a>
+            </div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400"><a href="register.html">Register</a></div>
+           
+                 
+                </div>
+                
+      
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+          </div>
+          <div class="dropdown">
+            <div class="links">
+              <a href="index.html">Home</a>
+              <a href="index.html">About</a>
+              <a href="index.html">Speakers</a>
+              <a href="index.html">Highlights</a>
+              <a href="register.html">Register</a>
+             
+              <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section>
+        <div class="img">
+          <img src="nlfbghalf.jpg" alt="" style="max-width: 100%;">
+        </div>
+      </section>
+      <section>
+        <div class="heading text-center">
+                
+          <h1 data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100" class="gradient-text">REGISTER <span>NOW</span></h1>
+         
+        </div>
+        <div class="container">
+          <div class="row mt-5">
+
+            <div class="col-md-6 mt-3">
+              <div class="card" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">
+                <div class="content text-center">
+                <p style="font-family:'Poppins',serif;font-size: 40px;margin-top:20px;">General</p>
+               <p style="margin-top:-20px;">Free Register</p>
+
+                  <P style="margin-top: 45px;">Enjoy access to all sessions with timely reminders, complimentary photos, and free access to session recordings, along with timely meals.</P>
+                 <a href="register.html"><button class="paybtn" style="    width: 170px;
+                  height: 45px;
+                  border-radius: 7px;text-align: center;"><span style="text-align: center;">Free Registration</span></button></a> 
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-3">
+              <div class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
+                <div class="content text-center">
+                <p style="font-family:'Poppins',serif;font-size: 40px;margin-top:20px;">Premium</p>
+                <p style="margin-top: -20px;">&#8377;150</p>
+                  <P style="margin-top: 45px;">Elevate your experience with reserved seating, an exclusive NLF kit, session reminders, complimentary photos, and free access to session recordings, along with timely meals.</P>
+                <a href="register.html"><button class="paybtn" style="    width: 200px;
+                  height: 45px;
+                  border-radius: 7px;text-align: center;"><span style="text-align: center;">Premium Registration</span></button></a>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="download-buttons">
+          <button class="download-button" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="100" onclick="downloadFile('NLFBROUCHER.pdf')">Download Broucher</button>
+          <button class="download-button" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="200" onclick="downloadFile('file2.pdf')">Download Schedule </button>
+          <button class="download-button" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300" onclick="downloadFile('file3.zip')">Download Sessions </button>
+      </div>
+      </section>
+
+ 
+
+
+
+
+
+
+      <footer class="footer" style="margin-top: 40px;background-color: #2e1740;">
+      
+        <div class="container-fluid">
+          <div class="row align-items-center">
+  
+          
+          <div class="col-md-6">
+            <div class="logo " style="margin-left:0px;">
+              <img src="NLF-WHITE.png" alt="" style="width: 30%;margin-top: 55px;margin-left: 50px;">
+              <p style=" margin-left: 30px;margin-top: 10px; ;color: #ffffff8a;font-family: 'Red Hat Display',serif;font-size: 15px;font-weight: 100;">Experience the fusion of Beary and Tulu cultures at the Noorul Huda Literature Festival, celebrating Coastal Karnataka's heritage through vibrant sessions and meaningful discussions.
+              </p>
+            </div>
+              
+        
+          </div>
+          <div class="col-md-6 " style="margin-top: 70px;">
+            <div class="icons text-center" style="font-size: 25px;">
+           <a href="https://www.youtube.com/@noorulhudaonlive2722"><i class="fab fa-youtube "></i></a>   
+             <a style="text-decoration: none;" href="
+             https://www.instagram.com/noorulhudaliteraturefestival/profilecard/?igsh=MXFjcmtxYmFxaG0wag=="><i class="fab fa-instagram ml-2"></i></a> 
+           <a href="
+
+           https://www.facebook.com/noorulhudamadannoor?mibextid=ZbWKwL"> <i class="fab fa-facebook  ml-2"></i></a>  
+            <a style="text-decoration: none;" href="
+            https://chat.whatsapp.com/C3kk3Mi7slk3V5sSD80Shv"><i class="fab fa-whatsapp  ml-2"></i></a>  
+             
+            </div>
+            <div class="content text-center">
+              <p style="color: whitesmoke;margin-top: 5px;">Noorul Huda <span style="color: white; font-weight: bold;">Literature</span> Festival</p>
+            <a href="https://gizmohub-lab.github.io/gizmodesignhub/" style="text-decoration:none;">  <p style="color: rgba(255, 255, 255, 0.444);margin-top: -10px;font-size: 15px;">© 2024 Gizmo Design Hub. All Rights Reserved.</p></a>
+            </div>
+          </div>
+        </div>
+        </div>
+       </footer>
+
+
+       <script>
+       
+        function downloadFile(fileName) {
+            // Update the file paths for your PDFs here
+            const fileUrls = {
+                "NLFBROUCHER.pdf": "NLFBROUCHER.pdf",  // Replace with the actual path to your PDF
+                "file2.pdf": "path/to/your/file2.pdf",  // Replace with the actual path to your PDF
+                "file3.pdf": "path/to/your/file3.pdf"   // Replace with the actual path to your PDF
+            };
+            
+            const fileUrl = fileUrls[fileName];
+            if (fileUrl) {
+                // Create an invisible link element to trigger the download
+                const link = document.createElement('a');
+                link.href = fileUrl;
+                link.download = fileName;  // Set the download attribute with the file name
+                link.click();  // Simulate a click to trigger the download
+            } else {
+                alert('File not found!');
+            }
+        }
+    
+</script>
+  
+    <script>
+          window.onscroll = function () {
+          var header = document.querySelector("header");
+          var nav = document.querySelector("nav");
+          var links = document.querySelectorAll(".nav-container .links a");
+          var defaultLogo = document.getElementById("default-logo");
+          var scrolledLogo = document.getElementById("scrolled-logo");
+          var hamburgerIcon = document.querySelector(".hamburg"); // Select the hamburger icon
+  
+          if (window.scrollY > 50) {
+              header.style.backgroundColor = "white";
+              nav.style.backgroundColor = "white";
+              header.style.animation = "blink 0.5s";
+  
+              // Change text color of links to black
+              links.forEach(function(link) {
+                  link.style.color = "black";
+              });
+  
+              // Change hamburger icon color to black
+              hamburgerIcon.style.color = "black";
+  
+              // Show scrolled logo and hide default logo
+              defaultLogo.style.display = "none";
+              scrolledLogo.style.display = "block";
+          } else {
+              header.style.backgroundColor = "transparent";
+              nav.style.backgroundColor = "transparent";
+  
+              // Revert text color of links to original
+              links.forEach(function(link) {
+                  link.style.color = ""; // Use empty string to reset to CSS default
+              });
+  
+              // Revert hamburger icon color to white (or default color)
+              hamburgerIcon.style.color = "white";
+  
+              // Show default logo and hide scrolled logo
+              defaultLogo.style.display = "block";
+              scrolledLogo.style.display = "none";
+          }
+      };
+  </script>
+  <script>
+  window.addEventListener("scroll", function() {
+    const defaultLogo = document.getElementById("default-logo");
+    const scrolledLogo = document.getElementById("scrolled-logo");
+  
+    // Check scroll position
+    if (window.scrollY > 0) {
+        // User has scrolled down; show scrolled logo and hide default logo
+        defaultLogo.style.display = "none";
+        scrolledLogo.style.display = "inline-block";
+    } else {
+        // User is at the top of the page; show default logo on desktop only
+        if (window.innerWidth > 884) {
+            defaultLogo.style.display = "inline-block";
+            scrolledLogo.style.display = "none";
+        } else {
+            defaultLogo.style.display = "none";
+            scrolledLogo.style.display = "inline-block";
+        }
+    }
+  });
+  
+  // Optional: Update logo visibility when the window is resized
+  window.addEventListener("resize", function() {
+    const defaultLogo = document.getElementById("default-logo");
+    const scrolledLogo = document.getElementById("scrolled-logo");
+  
+    if (window.innerWidth <= 884) {
+        defaultLogo.style.display = "none";
+        scrolledLogo.style.display = "inline-block";
+    } else {
+        defaultLogo.style.display = "inline-block";
+        scrolledLogo.style.display = "none";
+    }
+  });
+  </script>
+  
+  
+  
+
+  
+  <script>
+    document.getElementById("eventsLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        window.open('NLFBROUCHER.pdf', '_blank'); // Open the PDF in a new tab
+    });
+  </script>
+  
+  
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({ offset: 0 });
+          function hamburg() {
+            document.querySelector('.dropdown').style.transform = 'translateY(0)';
+            document.querySelector('.hamburg').style.display = 'none';
+            document.querySelector('.cancel').style.display = 'block';
+          }
+          function cancel() {
+            document.querySelector('.dropdown').style.transform = 'translateY(-500px)';
+            document.querySelector('.cancel').style.display = 'none';
+            document.querySelector('.hamburg').style.display = 'block';
+          }
+        </script>
+  
+
+  
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+    </body>
+  </html>

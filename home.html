@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoorulHudaLiteratureFestival2024</title>
+  <link rel="icon" href="GIZMO DP.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="20x20" href="NLF-WHITE.png">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="styles.css">
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: 'Red Hat Display', serif;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: white;
+    }
+
+    header{
+      width: 100%;
+      height: 14vh;
+      overflow: hidden;
+      
+    }
+    header {
+   
+    transition: background-color 0.3s ease;
+}
+
+
+    nav{
+      width: 100%;
+      height: 14vh;
+      position: sticky;
+      background:transparent;
+      z-index: 1000;
+    }
+
+    .nav-container{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .logo{
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .logo span{
+      color: #30a8e5;
+      text-shadow: 0 0 10px #30a8e5;
+    }
+
+    .bell-icon {
+      font-size: 1.5rem;
+      color: red;
+      display: inline-block;
+      position: relative;
+    }
+
+    .bell-icon i {
+      font-size: 1.8rem;
+      color: red;
+    }
+
+    .hamburg
+    {
+        cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: black;
+      display: none;
+      font-size: 1.3rem;
+    }
+    .cancel{
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: black;
+      display: none;
+      font-size: 1rem;
+    }
+
+    .nav-container .links{
+      display: flex;
+      margin-left: 100px;
+    }
+
+    .nav-container .links a{
+      position: relative;
+      font-size: 20px;
+      color: black;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s linear;
+      font-family: 'GOXAC',serif;
+    }
+
+    .nav-container .links a::before{
+      position: absolute;
+      content: "";
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: black;
+      transition: 0.2s linear;
+    }
+
+    .nav-container .links a:hover::before{
+      width: 100%;
+    }
+
+    .nav-container .links a:hover{
+      color: black;
+    }
+
+    .dropdown{
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateY(-500px);
+      width: 100%;
+      height: auto;
+      backdrop-filter: blur(4px) brightness(40%);
+      box-shadow: 0 0 20px black;
+      transition: 0.2s linear;
+      background: white;
+    }
+
+    .dropdown .links a{
+      display: flex;
+      color: black;
+      text-decoration: none;
+      justify-content: center;
+      padding: 15px 0;
+      align-items: center;
+      transition: 0.2s linear;
+    }
+
+    .dropdown .links a:hover{
+      background-color: black;
+      color: white;
+    }
+
+    /* Media Queries for smaller devices */
+    @media (max-width: 884px) {
+      nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        font-size: 1.5rem;
+      }
+
+      .nav-container .links {
+        display: none;
+      }
+
+      .hamburg,
+      .cancel{
+        display: block;
+        margin-top: 10px;
+      }
+    }
+    /* Hide the first logo on mobile and tablet screens */
+@media (max-width: 884px) {
+    #default-logo {
+        display: none;
+    }
+    #scrolled-logo {
+        display: inline-block;
+    }
+}
+    .navbutton{
+       width: 230px;
+       height: 40px;
+       border-radius: 7px;
+       background: black;
+       border-color: none;
+       color: white;
+       transition: 0.3sec ease-in;
+       font-family: 'Montserrat', sans-serif;
+      
+    }
+    .navbutton:hover{
+      border-radius: 20px;
+    }
+    .navbtn{
+        margin-left: 20px;
+    }
+    .headline {
+    font-size: 6.5vw;
+    line-height: 1.2em;
+    font-family: 'Red Hat Display',sans-serif;
+    background: -webkit-linear-gradient(left,#dd3b8c ,#f9bf52 ,#1cb4a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+}
+  </style>
+
+
+<style>
+
+
+
+.speakers{
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+}
+.slide-container{
+max-width: 1120px;
+width: 100%;
+padding: 40px 0;
+}
+.slide-content{
+margin: 0 40px;
+overflow: hidden;
+border-radius: 25px;
+}
+.card{
+border-radius: 25px;
+background-color: white;
+}
+
+.image-content,
+.card-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 10px 14px;
+}
+.image-content{
+position: relative;
+row-gap: 5px;
+padding: 25px 0;
+}
+.overlay{
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+
+background-color: white;
+
+
+border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+content: '';
+position: absolute;
+right: 0;
+bottom: -40px;
+height: 40px;
+width: 40px;
+
+background-color:white ;
+
+
+}
+.overlay::after{
+border-radius: 0 25px 0 0;
+background-color:white ;
+}
+.card-image{
+position: relative;
+height: 280px;
+width: 280px;
+border-radius: 50%;
+background: transparent;
+padding: 3px;
+}
+.card-image .card-img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+border: 4px solid transparent;
+}
+.name{
+font-size: 18px;
+font-weight: 500;
+color: #333;
+}
+.description{
+font-size: 14px;
+color: #707070;
+text-align: center;
+}
+.button{
+border: none;
+font-size: 16px;
+color: #FFF;
+padding: 8px 16px;
+background-color: black;
+border-radius: 6px;
+margin: 14px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.button:hover{
+background: black;
+}
+
+.swiper-navBtn{
+color: black;
+transition: color 0.3s ease;
+margin-top: 40px;
+}
+.swiper-navBtn:hover{
+color:#662d91 ;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+font-size: 35px;
+}
+.swiper-button-next{
+right: 0;
+}
+.swiper-button-prev{
+left: 0;
+}
+.swiper-pagination-bullet{
+background-color: #662d91;
+opacity: 1;
+}
+.swiper-pagination-bullet-active{
+background-color: #662d91;
+}
+
+@media screen and (max-width: 768px) {
+.slide-content{
+  margin: 0 10px;
+}
+.swiper-navBtn{
+  display: none;
+}
+}
+</style>
+
+
+
+
+<style>
+  .type {
+    position: relative;
+    background: url(scndbg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    padding-top: 5em;
+    color: black;
+  }
+
+  /* Dark overlay */
+  .type::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+    z-index: 1;
+  }
+
+  /* Ensures the text appears on top of the overlay */
+  .type h1 {
+    position: relative;
+    font-size: 40px;
+    margin-top: -20px;
+    font-family: 'Cream Cake', cursive;
+    color: #ffffff; /* Text color over the dark overlay */
+    z-index: 2;
+  }
+
+  /* General styles */
+  * {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1.gradient-text {
+    font-family: 'Goxac', sans-serif;
+    font-size: 3.5em;
+    font-weight: normal;
+    color: black;
+  }
+
+  h1.gradient-text span {
+    font-weight: 400;
+    font-family: 'Goxac', sans-serif;
+    color: #1d5c90;
+  }
+
+  .attach {
+    background: url(nlfbg.jpg);
+    background-attachment: fixed;
+    position: relative;
+    max-height: 300px;
+    object-fit: cover;
+  }
+</style>
+ <style>
+     .countersec {
+      position: relative;
+      background: url(scndbg.jpg) no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+  
+    /* Dark overlay */
+    .countersec::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+      z-index: -1;
+    }
+  
+    .counter-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px 0;
+      position: relative;
+      z-index: 2; /* Keeps content above the overlay */
+    }
+  
+    .counter-box {
+      color: #fbc149ed;
+      text-align: center;
+    }
+  
+    .counter-box h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    .counter-box p {
+      font-size: 1em;
+      color: white;
+      z-index: 1;
+      font-weight: 100;
+    }
+  
+.wrap{
+  font-family: 'Backalisties', sans-serif;
+  font-size: 50px;
+  color: white;
+}
+@font-face {
+    font-family: 'Goxac';
+    src: url(GOXAC-GOXAC-Regular.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Cream Cake';
+    src: url(Cream\ Cake.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Billian Dreams';
+    src: url(BillionDreams_PERSONAL.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Backalisties';
+    src: url(Bacalisties.ttf) format('truetype'); /* Replace with actual path and file name */
+}
+.btns{
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-color: black;
+
+}
+.btns:hover{
+  background-color: red;
+  border-color: red;
+}
+
+  </style>
+
+  <style>
+    .buttn{
+      background: transparent;
+       border-color: balck solid; 
+       font-size: 20px;
+    }
+    .buttn:hover{
+      background-color: 
+      #2e1740;
+      color: white;
+      font-weight: 500;
+    }
+    
+  </style>
+
+ 
+    <style>
+  .lastbutton {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30vh;
+background-color: white;
+}
+
+.next-page-arrow {
+text-decoration: none;
+font-size: 24px;
+color: black;
+border: 2px solid black;
+padding: 10px 20px;
+border-radius: 20px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next-page-arrow:hover {
+background-color: #2e1740;
+color: #fff;
+}
+i{
+  cursor: pointer;
+  transform: 3sec ease-out;
+  color: white;
+}
+i:hover{
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, 0.589);
+}
+
+    </style>
+
+  </head>
+  <body>
+
+    <header class="header"  style="position: fixed; z-index: 4; " >
+        <nav>
+          <div class="nav-container">
+            <div class="logo-image" data-aos="zoom-in" data-aos-duration="1500">
+                <img src="logo.png" alt="" id="default-logo" style="width:auto; height: 50px; margin-top: 10px;">
+                <img src="logo.png" alt="Scrolled Logo" id="scrolled-logo" style="width:auto; height: 50px; margin-top: 10px; display: none;">
+            </div>
+            <div class="links" style="margin-top: 0px;">
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300"><a href="#speakers">Speakers</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400"><a href="#Highlights">Highlights</a></div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">
+                <a href="#" id="eventsLink">Sessions</a>
+            </div>
+              <div class="link" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400"><a href="register.html">Register</a></div>
+           
+                 
+                </div>
+                
+      
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+          </div>
+          <div class="dropdown">
+            <div class="links">
+              <a href="index.html">Home</a>
+              <a href="#about">About</a>
+              <a href="#speakers">Speakers</a>
+              <a href="#Highlights">Highlights</a>
+              <a href="register.html">Register</a>
+             
+              <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+     <section class="main">
+      <div class="main">
+        <img src="bgfinal.jpg" alt="" style="max-width: 100%;height: auto;">
+      
+      
+      </div>
+     
+     </section>
+    
+    
+    
+      
+
+    
+
+    <section id="about" style="background: url();background-attachment: fixed;">
+        <div class="container">
+          
+           
+            <div class="col-md-12" style="margin-top: 120px;">
+              <div class="heading text-center">
+                
+                <h1 data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100" class="gradient-text">DISCOVER THE  <span>FEST</span></h1>
+               
+              </div>
+              <div class="contennt mt-5 text-center">
+                
+                <p data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100" style="color: black;">
+                  The Noorul Huda Literature Festival is a committed and authentic endeavour to express and discuss Costal Karnataka's rich history and cultural heritage. Both academic and popular in nature, this focused festival brings about an array of topics that are urgent and significant for the people of this place. To be held in Madannoor from December 7,8, 2023.NLF creates a unique space where distinguished laureates, thinkers, social activists and enthusiasts come together to explore the cultural diversity of Karnataka and to unfold the literary elegance and tranquil coexistence of Tulu, Beary. The festival's themes honor Karnataka's rich heritage, weaving together history, language, and art to foster a deeper connection among communities.An initiative of NSU, the Student Association of Noorul Huda Islamic Academy, located in the serene village of Madannoor. We bring NLF to the community, promoting creativity, intellectual growth, and cultural pride.</p>
+                <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100" class="text-center">
+                 <a href="register.html"> <button class="btns" style="  padding: 10px;font-weight:bold;border-radius: 5px;">REGISTER NOW</button>
+                 </div></a>
+               
+              </div>
+            </div>
+           
+              
+          
+          
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="type" style="height: 200px;margin-top: 50px;"  data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100">
+      <h1>
+          <a href="start.html" style="text-decoration: none;  font-family: 'Cream Cake', cursive; color: white;" class="typewrite" data-period="2000" data-type='[ "NSU Presents", "Noorul Huda Literature Festival", "On  7 | 8 Dec 2024", "Welcome You All" ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+  </section>
+
+ 
+
+    <section class="speakers" id="speakers">
+     
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="text-center mt-5">
+            <h1 data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100" class="gradient-text">EVENT<span>SPEAKERS</span></h1>
+           
+          </div>
+         
+          <div class="card-wrapper swiper-wrapper mt-5" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="100">
+           
+            <div class=" swiper-slide">
+             
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="14.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Bk hariprasad</h2>
+                <p class="description">Member of the Karnataka Legislative Council</p>
+    
+               
+              </div>
+            </div>
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="15.jpg" alt="" class="card-img" >
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Muzaffer assadi</h2>
+                <p class="description">
+                  
+Professor | Department of Studies in Political Science, University of Mysore.</p>
+    
+                
+              </div>
+            </div>
+           
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="12.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Dinesh Ameen Mattu</h2>
+                <p class="description">
+                  Media Advisor Of CM</p>
+    
+              
+              </div>
+            </div>
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="11.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">M.G Hegde</h2>
+                <p class="description">
+                 Congress Spokesperson | Social Activist | Senior Politician</p>
+    
+               
+              </div>
+            </div>
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="10.jpg" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Shiva Sundhar</h2>
+                <p class="description">Journalist | Social Activist</p>
+    
+                
+              </div>
+            </div>
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="9.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">C Davood</h2>
+                <p class="description">Managing Editor | Media One TV</p>
+    
+              
+              </div>
+            </div>
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="8.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Ismath Fajeer</h2>
+                <p class="description">Activist | Member Of Beary Text-Book Committee</p>
+    
+                
+              </div>
+            </div>
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="7.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Hamza Malar</h2>
+                <p class="description">Journalist</p>
+    
+                
+              </div>
+            </div> 
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="6.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Muneer Katipalla</h2>
+                <p class="description">
+                  The State President Of (DYFI)</p>
+    
+                
+              </div>
+            </div>
+
+
+           
+
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="4.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">
+                  Sabi Inspire</h2>
+                <p class="description">Social Influencer | Youtube Vlogger</p>
+    
+                
+              </div>
+            </div> 
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="3.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Mohan Alva</h2>
+                <p class="description"> Chairman of the Alva's Education Foundation</p>
+    
+                
+              </div>
+            </div> 
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="2.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name"> Kh thanoor </h2>
+                <p class="description">Musical Artist</p>
+    
+                
+              </div>
+            </div>
+
+           
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="SHIYAS AHMED.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Shiyas Ahmad</h2>
+                <p class="description">Artist | Calligrapher | Trainer </p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="VASUDENDRA.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Vasudhendra</h2>
+                <p class="description">Novelist | Story Writer</p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="derlasaheb.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Narendhra Rai Derla</h2>
+                <p class="description">Kannada Poet</p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="PUNEETH APPU.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Puneeth Appu </h2>
+                <p class="description">Writer | Speaker</p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="zameerahmed.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Dr . Zameer Ahmed Konanur</h2>
+                <p class="description">Speaker</p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="MANJUNATH DYSP.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">Manjunath</h2>
+                <p class="description">DYSP</p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="Haneef ustad.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">adv . Haneef Hudawi</h2>
+                <p class="description">Advocate | Speaker | Trainer </p>
+    
+                
+              </div>
+            </div>
+
+            <div class=" swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+    
+                <div class="card-image">
+                  <img src="advmuzaffar.jpg" alt="" class="card-img">
+                </div>
+              </div>
+    
+              <div class="card-content">
+                <h2 class="name">adv . Muzaffar</h2>
+                <p class="description">Advocate</p>
+    
+                
+              </div>
+            </div>
+
+           
+
+           
+
+           
+
+           
+          </div>
+        </div>
+    
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+    </section>
+
+    <section class="counter-section countersec" style="margin-top: 50px;"  data-aos="fade-down" data-aos-duration="1500" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mt-3">
+            <div class="counter-box">
+              <h2 class="text-white"><span class="counter text-white" data-count="1000">0</span>+</h2>
+              <p>Paticipants</p>
+          </div>
+          </div>
+    
+          <div class="col-md-3 mt-3">
+            <div class="counter-box">
+              <h2 class="text-white"><span class="counter text-white" data-count="30">0</span>+</h2>
+              <p>Event Speakers</p>
+          </div>
+          </div> 
+          <div class="col-md-3 mt-3">
+            <div class="counter-box">
+              <h2 class="text-white"><span class="counter text-white" data-count="20" data-format="two-digits">00</span>+</h2>
+              <p>Sessions</p>
+          </div>
+      </div>
+    
+      <div class="col-md-3 mt-3">
+        <div class="counter-box">
+          <h2 class="text-white"><span class="counter text-white" data-count="02" data-format="two-digits">00</span>+</h2>
+          <p>Days</p>
+      </div>
+    </div>
+    
+        </div>
+      </div>
+     </section>
+
+     <section id="Highlights">
+      <div class="text-center " style="margin-top: 90px;">
+        <h1 class="gradient-text" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">HIGH<span>LIGHTS</span></h1>
+       
+      </div>
+      <div class="container" style="margin-top: 70px;">
+        <div class="row" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
+          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;">
+              <img src="100.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
+              <div class="content">
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
+                  Heritage Walk
+                </h4>
+              
+            </div>
+          </div>
+          </div>
+          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;">
+              <img src="commingsoon.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
+              <div class="content">
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
+                 Book Fair
+                </h4>
+              
+            </div>
+          </div>
+          </div>
+          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;">
+              <img src="commingsoon.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
+              <div class="content">
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
+                 Campus Talk
+                </h4>
+              
+            </div>
+          </div>
+          </div>
+          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;">
+              <img src="commingsoon.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
+              <div class="content">
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
+                  Cultural Program
+                </h4>
+              
+            </div>
+          </div>
+          </div>
+        </div>
+       
+      </div>
+     </section>
+
+
+     <section style="margin-top: 70px; margin-bottom:px;">
+      <div class="">
+        <img data-aos="flip-up" data-aos-duration="1500" data-aos-delay="100" src="UT WEB.png" alt="" style="max-width: 100%;">
+      </div>
+     </section>
+
+     <section class="lastbutton" style="margin-top: 20px;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+      <a style="text-decoration: none;" href="register.html" class="next-page-arrow">Register Now &rarr;</a>
+  </section>
+
+  <footer class="footer" style="margin-top: 40px;background-color: #2e1740;">
+      
+    <div class="container-fluid">
+      <div class="row align-items-center">
+
+      
+      <div class="col-md-6">
+        <div class="logo " style="margin-left:0px;">
+          <img src="NLF-WHITE.png" alt="" style="width: 30%;margin-top: 55px;margin-left: 50px;">
+          <p style=" margin-left: 30px;margin-top: 10px; ;color: #ffffff8a;font-family: 'Red Hat Display',serif;font-size: 15px;font-weight: 100;">Experience the fusion of Beary and Tulu cultures at the Noorul Huda Literature Festival, celebrating Coastal Karnataka's heritage through vibrant sessions and meaningful discussions.
+          </p>
+        </div>
+          
+    
+      </div>
+      <div class="col-md-6 " style="margin-top: 70px;">
+        <div class="icons text-center" style="font-size: 25px;">
+       <a href="https://www.youtube.com/@noorulhudaonlive2722"><i class="fab fa-youtube "></i></a>   
+         <a style="text-decoration: none;" href="
+         https://www.instagram.com/noorulhudaliteraturefestival/profilecard/?igsh=MXFjcmtxYmFxaG0wag=="><i class="fab fa-instagram ml-2"></i></a> 
+       <a href="
+
+       https://www.facebook.com/noorulhudamadannoor?mibextid=ZbWKwL"> <i class="fab fa-facebook  ml-2"></i></a>  
+        <a style="text-decoration: none;" href="
+        https://chat.whatsapp.com/C3kk3Mi7slk3V5sSD80Shv"><i class="fab fa-whatsapp  ml-2"></i></a>  
+         
+        </div>
+        <div class="content text-center">
+          <p style="color: whitesmoke;margin-top: 5px;">Noorul Huda <span style="color: white; font-weight: bold;">Literature</span> Festival</p>
+        <a href="https://gizmohub-lab.github.io/gizmodesignhub/" style="text-decoration:none;">  <p style="color: rgba(255, 255, 255, 0.444);margin-top: -10px;font-size: 15px;">© 2024 Gizmo Design Hub. All Rights Reserved.</p></a>
+        </div>
+      </div>
+    </div>
+    </div>
+   </footer>
+
+
+   
+    
+   
+     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const counters = document.querySelectorAll('.counter');
+          counters.forEach(counter => {
+              counter.innerText = '0';
+              const updateCounter = () => {
+                  const target = +counter.getAttribute('data-count');
+                  const current = +counter.innerText;
+                  const increment = target / 5000;
+    
+                  if (current < target) {
+                      counter.innerText = `${Math.ceil(current + increment)}`;
+                      setTimeout(updateCounter, 80);
+                  } else {
+                      let formattedTarget = target;
+                      // Check if the counter requires two-digit formatting
+                      if (counter.getAttribute('data-format') === 'two-digits') {
+                          formattedTarget = target.toString().padStart(2, '0'); // Add leading zero if necessary
+                      }
+                      counter.innerText = formattedTarget;
+                  }
+              };
+    
+              updateCounter();
+          });
+      });
+    </script>
+  
+
+  <script>
+
+  
+    window.onscroll = function () {
+        var header = document.querySelector("header");
+        var nav = document.querySelector("nav");
+        var links = document.querySelectorAll(".nav-container .links a");
+        var defaultLogo = document.getElementById("default-logo");
+        var scrolledLogo = document.getElementById("scrolled-logo");
+        var hamburgerIcon = document.querySelector(".hamburg"); // Select the hamburger icon
+
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = "white";
+            nav.style.backgroundColor = "white";
+            header.style.animation = "blink 0.5s";
+
+            // Change text color of links to black
+            links.forEach(function(link) {
+                link.style.color = "black";
+            });
+
+            // Change hamburger icon color to black
+            hamburgerIcon.style.color = "black";
+
+            // Show scrolled logo and hide default logo
+            defaultLogo.style.display = "none";
+            scrolledLogo.style.display = "block";
+        } else {
+            header.style.backgroundColor = "transparent";
+            nav.style.backgroundColor = "transparent";
+
+            // Revert text color of links to original
+            links.forEach(function(link) {
+                link.style.color = ""; // Use empty string to reset to CSS default
+            });
+
+            // Revert hamburger icon color to white (or default color)
+            hamburgerIcon.style.color = "white";
+
+            // Show default logo and hide scrolled logo
+            defaultLogo.style.display = "block";
+            scrolledLogo.style.display = "none";
+        }
+    };
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const defaultLogo = document.getElementById("default-logo");
+  const scrolledLogo = document.getElementById("scrolled-logo");
+
+  // Check scroll position
+  if (window.scrollY > 0) {
+      // User has scrolled down; show scrolled logo and hide default logo
+      defaultLogo.style.display = "none";
+      scrolledLogo.style.display = "inline-block";
+  } else {
+      // User is at the top of the page; show default logo on desktop only
+      if (window.innerWidth > 884) {
+          defaultLogo.style.display = "inline-block";
+          scrolledLogo.style.display = "none";
+      } else {
+          defaultLogo.style.display = "none";
+          scrolledLogo.style.display = "inline-block";
+      }
+  }
+});
+
+// Optional: Update logo visibility when the window is resized
+window.addEventListener("resize", function() {
+  const defaultLogo = document.getElementById("default-logo");
+  const scrolledLogo = document.getElementById("scrolled-logo");
+
+  if (window.innerWidth <= 884) {
+      defaultLogo.style.display = "none";
+      scrolledLogo.style.display = "inline-block";
+  } else {
+      defaultLogo.style.display = "inline-block";
+      scrolledLogo.style.display = "none";
+  }
+});
+</script>
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000, // Slide moves every 3 seconds (3000 ms)
+      disableOnInteraction: false, // Continue autoplay even after user interaction
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      950: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+<script>
+  document.getElementById("eventsLink").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      window.open('NLFBROUCHER.pdf', '_blank'); // Open the PDF in a new tab
+  });
+</script>
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({ offset: 0 });
+        function hamburg() {
+          document.querySelector('.dropdown').style.transform = 'translateY(0)';
+          document.querySelector('.hamburg').style.display = 'none';
+          document.querySelector('.cancel').style.display = 'block';
+        }
+        function cancel() {
+          document.querySelector('.dropdown').style.transform = 'translateY(-500px)';
+          document.querySelector('.cancel').style.display = 'none';
+          document.querySelector('.hamburg').style.display = 'block';
+        }
+      </script>
+
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+  </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>

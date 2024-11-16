@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading with Fade-in Image and Full Progress Line</title>
+  <style>
+    /* Basic styles for page layout */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    #loading-screen {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #loading-screen img {
+      max-width: 80%;
+      max-height: 80%;
+      opacity: 0;
+      animation: fadeInImage 5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInImage {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    #loading-screen p {
+      color: #263b90;
+      font-size: 18px;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeInText 5s ease-in-out forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Styling the progress line */
+    .progress-line {
+      width: 50%;
+      height: 8px;
+      background-color: #ddd;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #263b90;
+      width: 0%;
+      animation: fillProgressLine 5s linear forwards;
+    }
+
+    @keyframes fillProgressLine {
+      0% { width: 0%; }
+      100% { width: 100%; } /* The line now fills fully */
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <img src="logo.png" alt="Loading Image">
+    <div class="progress-line">
+      <div class="progress-bar"></div>
+    </div>
+    <p>Loading...</p>
+  </div>
+
+  <script>
+    window.onload = function() {
+      // After 5 seconds, redirect to home.html
+      setTimeout(function() {
+        window.location.href = "home.html";
+      }, 5000); // 5000 ms = 5 seconds
+    };
+  </script>
+</body>
+</html>
