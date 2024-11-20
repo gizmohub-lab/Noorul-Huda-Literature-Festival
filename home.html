@@ -575,6 +575,52 @@ i:hover{
 
     </style>
 
+    <style>
+      /* Style for the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  backdrop-filter: blur(5px); /* Apply blur to the background */
+  margin-top: 100px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Additional styling for the text in the modal */
+#modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#modal-description {
+  font-size: 18px;
+  color: #555;
+}
+
+    </style>
+
   </head>
   <body>
 
@@ -1080,61 +1126,55 @@ Professor | Department of Studies in Political Science, University of Mysore.</p
      </section>
 
      <section id="Highlights">
-      <div class="text-center " style="margin-top: 90px;">
+      <div class="text-center" style="margin-top: 90px;">
         <h1 class="gradient-text" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">HIGH<span>LIGHTS</span></h1>
-       
       </div>
       <div class="container" style="margin-top: 70px;">
         <div class="row" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100">
-          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-            <div class="card" style="border-radius: 10px;">
+          <div class="col-md-3 mt-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;" onclick="openModal('heritage')">
               <img src="100.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
               <div class="content">
-                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
-                  Heritage Walk
-                </h4>
-              
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">Heritage Walk</h4>
+              </div>
             </div>
           </div>
-          </div>
-          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-            <div class="card" style="border-radius: 10px;">
+          <div class="col-md-3 mt-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;" onclick="openModal('bookFair')">
               <img src="commingsoon.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
               <div class="content">
-                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
-                 Book Fair
-                </h4>
-              
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">Book Fair</h4>
+              </div>
             </div>
           </div>
-          </div>
-          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-            <div class="card" style="border-radius: 10px;">
+          <div class="col-md-3 mt-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;" onclick="openModal('campusTalk')">
               <img src="commingsoon.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
               <div class="content">
-                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
-                 Campus Talk
-                </h4>
-              
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">Campus Talk</h4>
+              </div>
             </div>
           </div>
-          </div>
-          <div class="col-md-3 mt-3"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-            <div class="card" style="border-radius: 10px;">
+          <div class="col-md-3 mt-3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <div class="card" style="border-radius: 10px;" onclick="openModal('culturalProgram')">
               <img src="commingsoon.jpg" alt="one" style="max-width: 100%; width: 100%;border-radius: 10px;">
               <div class="content">
-                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">
-                  Cultural Program
-                </h4>
-              
+                <h4 style="color: black;font-size: 20px;margin-top: 15px;text-align: center;">Cultural Program</h4>
+              </div>
             </div>
-          </div>
           </div>
         </div>
-       
       </div>
-     </section>
-
+    </section>
+    
+    <!-- Modal for displaying detailed program -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+      </div>
+    </div>
 
      <section style="margin-top: 70px; margin-bottom:px;">
       <div class="">
@@ -1417,6 +1457,56 @@ window.addEventListener("resize", function() {
         document.body.appendChild(css);
     };
   </script>
+
+    
+<script>
+function openModal(program) {
+  // Disable scrolling on the body
+  document.body.style.overflow = "hidden";
+  
+  // Show the modal
+  document.getElementById('modal').style.display = "block";
+  
+  // Set the content based on the clicked program
+  let title = "";
+  let description = "";
+  
+  switch(program) {
+    case 'heritage':
+      title = "Heritage Walk";
+      description = "Explore the rich history and cultural landmarks in a guided Heritage Walk.";
+      break;
+    case 'bookFair':
+      title = "Book Fair";
+      description = "Join us for the Book Fair showcasing new books, author talks, and more!";
+      break;
+    case 'campusTalk':
+      title = "Campus Talk";
+      description = "Attend discussions and talks with inspiring speakers from various fields.";
+      break;
+    case 'culturalProgram':
+      title = "Cultural Program";
+      description = "Experience a vibrant cultural showcase featuring music, dance, and performances.";
+      break;
+    default:
+      title = "Unknown Program";
+      description = "Details about this program will be updated soon!";
+      break;
+  }
+
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-description').innerText = description;
+}
+
+function closeModal() {
+  // Enable scrolling on the body again
+  document.body.style.overflow = "auto";
+  
+  // Hide the modal
+  document.getElementById('modal').style.display = "none";
+}
+
+</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
