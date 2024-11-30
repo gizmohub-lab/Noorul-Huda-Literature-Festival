@@ -1527,60 +1527,59 @@ window.addEventListener("resize", function() {
     };
   </script>
 
-    
 <script>
-function openModal(program) {
-  // Disable scrolling on the body
-  document.body.style.overflow = "hidden";
+  function openModal(program) {
+    // Disable scrolling on the body
+    document.body.style.overflow = "hidden";
+    
+    // Show the modal
+    document.getElementById('modal').style.display = "block";
+    
+    // Set the content based on the clicked program
+    let title = "";
+    let description = "";
+    
+    switch(program) {
+      case 'heritage':
+        title = "Heritage Walk";
+        description = "Join us for Heritage Walk, an exploratory journey to nearby heritage sites around our campus. Together, we’ll visit these places, delve into their stories, and uncover knowledge from our shared past. It’s a unique opportunity to walk through history, learn, and experience the legacy that surrounds us!";
+        break;
+      case 'bookFair':
+        title = "Book Fair";
+        description = "At Books Karwan, explore a diverse selection of books—from novels to a variety of genres. Browse, read, and purchase on the spot—no orders, just a pure book fair experience. Whether you're looking to take home a book or simply enjoy a quiet read, Books Karwan is the place for you at the Noorul Huda Literature Festival!";
+        break;
+      case 'campusTalk':
+        title = "Web Revealing";
+        description = "Step into Campus Talk, a lively session where students bring the campus community together with thought-provoking discussions, fun quizzes, and spot prizes for quick minds. With each question, participants add color and excitement to the program, creating an engaging and memorable experience for all. Join us at the Noorul Huda Literature Festival for Campus Talk, where knowledge meets excitement!";
+        break;
+      case 'culturalProgram':
+        title = "Cultural Program";
+        description = "Join us for Cultural Night, where  traditions come alive! Experience captivating performances in music, Islamic arts, and traditional culture, all showcased by talented artists dedicated to preserving and sharing their heritage. Immerse yourself in an evening of rich culture and vibrant artistry, celebrating the heart and soul of our community at the Nooul Huda Literature Festival!";
+        break;
+      default:
+        title = "Unknown Program";
+        description = "Details about this program will be updated soon!";
+        break;
+    }
   
-  // Show the modal
-  document.getElementById('modal').style.display = "block";
-  
-  // Set the content based on the clicked program
-  let title = "";
-  let description = "";
-  
-  switch(program) {
-    case 'heritage':
-      title = "Heritage Walk";
-      description = "Join us for Heritage Walk, an exploratory journey to nearby heritage sites around our campus. Together, we’ll visit these places, delve into their stories, and uncover knowledge from our shared past. It’s a unique opportunity to walk through history, learn, and experience the legacy that surrounds us!";
-      break;
-    case 'bookFair':
-      title = "Book Fair";
-      description = "At "Book's Karwan," explore a diverse selection of books—from novels to a variety of genres. Browse, read, and purchase on the spot—no orders, just a pure book fair experience. Whether you're looking to take home a book or simply enjoy a quiet read, "Books Karwan" is the place for you at the Noorul Huda Literature Festival!";
-      break;
-    case 'campusTalk':
-      title = "Web Revealing";
-      description = "Step into Campus Talk, a lively session where students bring the campus community together with thought-provoking discussions, fun quizzes, and spot prizes for quick minds. With each question, participants add color and excitement to the program, creating an engaging and memorable experience for all. Join us at the Noorul Huda Literature Festival for Campus Talk, where knowledge meets excitement!";
-      break;
-    case 'culturalProgram':
-      title = "Cultural Program";
-      description = "Join us for Cultural Night, where  traditions come alive! Experience captivating performances in music, Islamic arts, and traditional culture, all showcased by talented artists dedicated to preserving and sharing their heritage. Immerse yourself in an evening of rich culture and vibrant artistry, celebrating the heart and soul of our community at the Nooul Huda Literature Festival!";
-      break;
-    default:
-      title = "Unknown Program";
-      description = "Details about this program will be updated soon!";
-      break;
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-description').innerText = description;
   }
-
-  document.getElementById('modal-title').innerText = title;
-  document.getElementById('modal-description').innerText = description;
-}
-
-function closeModal() {
-  // Enable scrolling on the body again
-  document.body.style.overflow = "auto";
   
-  // Hide the modal
-  document.getElementById('modal').style.display = "none";
-}
-
-</script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
- 
-  </body>
-</html>
+  function closeModal() {
+    // Enable scrolling on the body again
+    document.body.style.overflow = "auto";
+    
+    // Hide the modal
+    document.getElementById('modal').style.display = "none";
+  }
+  
+  </script>
+  
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+    </body>
+  </html>
